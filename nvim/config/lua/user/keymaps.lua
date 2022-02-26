@@ -31,8 +31,9 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- save and quit
 keymap("n", "<leader>w", ":write<CR>", opts)
-keymap("n", "<leader>q", ":quit<R>", opts)
-keymap("n", "<leader>Q", ":quit!<CR>", opts)
+-- keymap("n", "<leader>q", ":quit<CR>", opts) handled by bufdelete
+keymap("n", "<leader>x", ":x<CR>", opts)
+keymap("n", "<leader>Q", ":quitall!<CR>", opts)
 
 
 -- keep more or less in the same place when going next
