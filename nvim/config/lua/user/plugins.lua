@@ -47,6 +47,10 @@ return packer.startup(function(use)
 		"catppuccin/nvim",
 		as = "catppuccin",
 	})
+	use({
+		"marko-cerovac/material.nvim",
+		as = "material"
+	})
 	use("stevearc/dressing.nvim")
 	use("j-hui/fidget.nvim")
 	use("nvim-lualine/lualine.nvim")
