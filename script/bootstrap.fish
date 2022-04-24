@@ -110,6 +110,8 @@ function install_dotfiles
 		or abort yamllint
 	link_file $DOTFILES_ROOT/karabiner $HOME/.config/karabiner backup
 		or abort yamllint
+	link_file '/Volumes/GoogleDrive/My Drive' $HOME/gdrive backup
+		or abort gdrive
 end
 
 curl -sL git.io/fisher | source && fisher install jorgebucaran/fisher
@@ -127,6 +129,10 @@ install_dotfiles
 fisher update
 	and success 'plugins'
 	or abort 'plugins'
+
+mkdir -p ~/.bin
+	and success 'local bin'
+	or abort 'local bin'
 
 mkdir -p ~/.config/fish/completions/
 	and success 'completions'
