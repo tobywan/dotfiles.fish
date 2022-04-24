@@ -108,6 +108,8 @@ function install_dotfiles
 		or abort nvim
 	link_file $DOTFILES_ROOT/yamllint/config $HOME/.config/yamllint/config backup
 		or abort yamllint
+	link_file $DOTFILES_ROOT/karabiner/config $HOME/.config/karabiner/config backup
+		or abort yamllint
 end
 
 curl -sL git.io/fisher | source && fisher install jorgebucaran/fisher

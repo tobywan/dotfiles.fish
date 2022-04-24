@@ -11,6 +11,8 @@
 #	commit = commit -s
 	commend = commit -s --amend --no-edit
 	lt = log --tags --decorate --simplify-by-decoration --oneline
+	dt = difftool
+	mt = mergetool
 [color]
 	diff = auto
 	status = auto
