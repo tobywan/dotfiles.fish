@@ -108,7 +108,7 @@ function install_dotfiles
 		or abort nvim
 	link_file $DOTFILES_ROOT/yamllint/config $HOME/.config/yamllint/config backup
 		or abort yamllint
-	link_file $DOTFILES_ROOT/karabiner/config $HOME/.config/karabiner/config backup
+	link_file $DOTFILES_ROOT/karabiner $HOME/.config/karabiner backup
 		or abort yamllint
 end
 
