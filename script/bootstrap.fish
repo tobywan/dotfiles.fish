@@ -130,10 +130,6 @@ fisher update
 	and success 'plugins'
 	or abort 'plugins'
 
-mkdir -p ~/.bin
-	and success 'local bin'
-	or abort 'local bin'
-
 mkdir -p ~/.config/fish/completions/
 	and success 'completions'
 	or abort 'completions'
