@@ -2805,7 +2805,7 @@
 			<key>Log Directory</key>
 			<string></string>
 			<key>Minimum Contrast</key>
-			<real>0.20000000000000001</real>
+			<real>0.099999999999999964</real>
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
@@ -3208,7 +3208,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Thin Strokes</key>
-			<integer>3</integer>
+			<integer>4</integer>
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Triggers</key>
