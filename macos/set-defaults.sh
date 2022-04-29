@@ -9,6 +9,8 @@
 #    https://gist.github.com/brandonb927/3195465
 #
 # Run ./set-defaults.sh and you'll be good to go.
+# To track what is going on with your defaults as you change them
+# use https://github.com/catilac/plistwatch
 if [ "$(uname -s)" != "Darwin" ]; then
 	exit 0
 fi
@@ -251,6 +253,9 @@ echo "  ›  Disable send and reply animations in Mail.app"
 defaults write com.apple.mail DisableReplyAnimations -bool true
 defaults write com.apple.mail DisableSendAnimations -bool true
 
+
+echo "  ›  Target the screen capture to clipboard"
+defaults write "com.apple.screencapture" "target" 'clipboard'
 #############################
 
 echo ""
