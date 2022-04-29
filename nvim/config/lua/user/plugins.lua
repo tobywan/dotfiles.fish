@@ -1,5 +1,7 @@
 local fn = vim.fn
 
+
+
 -- Automatically install packer
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -71,10 +73,15 @@ return packer.startup(function(use)
 	use("folke/todo-comments.nvim")
 	use("Pocco81/AutoSave.nvim")
 	use("ojroques/vim-oscyank")
+	use("ellisonleao/glow.nvim")
+	use("tpope/vim-abolish")
+	use("triglav/vim-visual-increment")
+	use("tpope/vim-speeddating")
 
 	-- telescope
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
+	use("nvim-telescope/telescope-github.nvim")
 	use({
 		"nvim-telescope/telescope-fzf-native.nvim",
 		run = "make",
@@ -114,14 +121,10 @@ return packer.startup(function(use)
 	use("nvim-telescope/telescope-dap.nvim")
 
 	-- git
-	use("TimUntersberger/neogit")
-	use("lewis6991/gitsigns.nvim")
-	use("ThePrimeagen/git-worktree.nvim")
+	use("mhinz/vim-signify")
 
 	-- testing et al
 	use("vim-test/vim-test")
-
-	use("ellisonleao/glow.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
