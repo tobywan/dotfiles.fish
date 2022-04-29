@@ -87,6 +87,7 @@ return packer.startup(function(use)
 		run = "make",
 	})
 
+
 	-- all things lsp, syntax highlight, snippets, etc
 	use("neovim/nvim-lspconfig")
 	use("nvim-lua/lsp-status.nvim")
