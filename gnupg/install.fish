@@ -1,4 +1,7 @@
 #!/usr/bin/env fish
+
+echo "Install gpgtools from https://gpgtools.org/"
+
 mkdir -p ~/.gnupg
 test -f ~/.gnupg/gpg-agent.conf || touch ~/.gnupg/gpg-agent.conf
 
@@ -13,3 +16,11 @@ grep -q "max-cache-ttl" ~/.gnupg/gpg-agent.conf || echo "max-cache-ttl 86400" >>
 if command -qs gpp-connect-agent
 	gpg-connect-agent reloadagent /bye
 end
+
+# To fix the " gpg: WARNING: unsafe permissions on homedir '/home/path/to/user/.gnupg' " error
+# Make sure that the .gnupg directory and its contents is accessibile by your user.
+chown -R $(whoami) ~/.gnupg/
+
+# Also correct the permissions and access rights on the directory
+chmod 600 ~/.gnupg/*
+chmod 700 ~/.gnupg
