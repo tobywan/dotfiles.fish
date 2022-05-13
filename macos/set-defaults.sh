@@ -90,7 +90,7 @@ echo "  › Set dark interface style"
 defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 
 echo "  › Set graphite appearance"
-defaults write NSGlobalDomain AppleAquaColorVariant -int 6
+defaults write NSGlobalDomain AppleAquaColorVariant -int 1
 
 echo "  › Set graphite highlight color"
 defaults write NSGlobalDomain AppleHighlightColor -string "0.847059 0.847059 0.862745"
@@ -140,6 +140,15 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 echo "  › Disable the warning when changing a file extension"
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+echo "  ›  Show folders first in Finder"
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+echo "  ›  Show file extensions"
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+echo "  ›  Don't be discoverable"
+defaults write com.apple.sharingd DiscoverableMode -string "Off"
 
 #############################
 
@@ -257,6 +266,9 @@ defaults write com.apple.mail DisableSendAnimations -bool true
 echo "  ›  Target the screen capture to clipboard"
 defaults write "com.apple.screencapture" "target" 'clipboard'
 #############################
+
+
+
 
 echo ""
 echo "› Time Machine:"
