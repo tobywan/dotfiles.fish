@@ -1,77 +1,86 @@
--- local ok, catppuccin = pcall(require, "catppuccin")
--- if not ok then
--- 	return
--- end
---
--- catppuccin.setup({
--- 	integrations = {
--- 		which_key = true,
--- 		neogit = true,
--- 	},
--- })
---
--- vim.cmd([[
--- set background=dark
--- set termguicolors
--- colorscheme catppuccin
-
---Lua:
-vim.g.material_style = "deep ocean"
-
-local ok, material = pcall(require, "material")
+-- theme from
+-- https://github.com/rmehri01/onenord.nvim
+local ok, catppuccin = pcall(require, "onenord")
 if not ok then
-	return
+    return
 end
 
-material.setup({
-	contrast = {
-		sidebars = false, -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
-		floating_windows = false, -- Enable contrast for floating windows
-		line_numbers = false, -- Enable contrast background for line numbers
-		sign_column = false, -- Enable contrast background for the sign column
-		cursor_line = false, -- Enable darker background for the cursor line
-		non_current_windows = false, -- Enable darker background for non-current windows
-		popup_menu = false, -- Enable lighter background for the popup menu
-	},
+local colors = require("onenord.colors").load()
 
-	italics = {
-		comments = true, -- Enable italic comments
-		keywords = false, -- Enable italic keywords
-		functions = false, -- Enable italic functions
-		strings = false, -- Enable italic strings
-		variables = false -- Enable italic variables
-	},
-
-	contrast_filetypes = { -- Specify which filetypes get the contrasted (darker) background
-		"terminal", -- Darker terminal background
-		"packer", -- Darker packer background
-		"qf" -- Darker qf list background
-	},
-
-	high_visibility = {
-		lighter = false, -- Enable higher contrast text for lighter style
-		darker = true -- Enable higher contrast text for darker style
-	},
-
-	disable = {
-		borders = false, -- Disable borders between verticaly split windows
-		background = false, -- Prevent the theme from setting the background (NeoVim then uses your teminal background)
-		term_colors = false, -- Prevent the theme from setting terminal colors
-		eob_lines = false -- Hide the end-of-buffer lines
-	},
-
-	lualine_style = "default", -- Lualine style ( can be 'stealth' or 'default' )
-
-	async_loading = true, -- Load parts of the theme asyncronously for faster startup (turned on by default)
-
-	custom_highlights = {
-		EndOfBuffer = { fg = "#005000" },
-		NonText = { fg = "#005050" },
-		Whitespace = { fg = "#005050" }
-	}
+require('onenord').setup({
+  theme = nil, -- "dark" or "light". Alternatively, remove the option and set vim.o.background instead
+  borders = true, -- Split window borders
+  fade_nc = false, -- Fade non-current windows, making them more distinguishable
+  -- Style that is applied to various groups: see `highlight-args` for options
+  styles = {
+    comments = "NONE",
+    strings = "NONE",
+    keywords = "NONE",
+    functions = "NONE",
+    variables = "NONE",
+    diagnostics = "underline",
+  },
+  disable = {
+    background = false, -- Disable setting the background color
+    cursorline = false, -- Disable the cursorline
+    eob_lines = true, -- Hide the end-of-buffer lines
+  },
+  -- Inverse highlight for different groups
+  inverse = {
+    match_paren = false,
+  },
+  custom_highlights = {
+	  Ignore = { fg = colors.cyan, bg = colors.bg, style = "NONE"},
+      htmlH1 = { fg = colors.cyan, style = "NONE"},
+      htmlH2 = { fg = colors.red, style = "NONE"},
+      htmlH3 = { fg = colors.green, style = "NONE"},
+      htmlH4 = { fg = colors.yellow, style = "NONE"},
+      htmlH5 = { fg = colors.purple, style = "NONE"},
+      markdownBold = { fg = colors.purple, style = "NONE"},
+      markdownH1 = { fg = colors.dark_blue, style = "NONE"},
+      markdownH2 = { fg = colors.blue, style = "NONE"},
+      markdownH3 = { fg = colors.cyan, style = "NONE"},
+      MatchParen = { fg = colors.yellow, bg = colors.none, style = "NONE"},
+      ModeMsg = { fg = colors.blue, style = "NONE"},
+      MoreMsg = { fg = colors.blue, style = "NONE"},
+      Search = { fg = colors.blue, bg = colors.selection, style = "NONE"},
+      Title = { fg = colors.green, bg = colors.none, style = "NONE"},
+      WildMenu = { fg = colors.yellow, bg = colors.none, style = "NONE"},
+      TSStrong = { fg = colors.purple, style = "NONE"},
+      TSTitle = { fg = colors.blue, style = "NONE"},
+      TSNote = { fg = colors.info, style = "NONE"},
+      TSWarning = { fg = colors.warn, style = "NONE"},
+      TSDanger = { fg = colors.error, style = "NONE"},
+      LspSignatureActiveParameter = { fg = colors.none, bg = colors.highlight_dark, style = "NONE"},
+      CmpItemAbbrMatch = { fg = colors.blue, style = "NONE"},
+      TelescopeMatching = { fg = colors.yellow, style = "NONE"},
+      NvimTreeSymlink = { fg = colors.cyan, style = "NONE"},
+      NvimTreeRootFolder = { fg = colors.green, style = "NONE"},
+      NvimTreeExecFile = { fg = colors.green, style = "NONE"},
+      NvimTreeImageFile = { fg = colors.purple, style = "NONE"},
+      WhichKey = { fg = colors.purple, style = "NONE"},
+      BufferCurrentMod = { fg = colors.yellow, bg = colors.bg, style = "NONE"},
+      BufferCurrentTarget = { fg = colors.red, bg = colors.bg, style = "NONE"},
+      BufferVisibleMod = { fg = colors.yellow, bg = colors.bg, style = "NONE"},
+      BufferVisibleTarget = { fg = colors.red, bg = colors.bg, style = "NONE"},
+      BufferInactiveTarget = { fg = colors.red, bg = colors.active, style = "NONE"},
+      HopNextKey = { fg = colors.fg_light, style = "NONE"},
+      HopNextKey1 = { fg = colors.cyan, style = "NONE"},
+      LightspeedUnlabeledMatch = { fg = colors.fg_light, style = "NONE"},
+  }, -- Overwrite default highlight groups
+  custom_colors = {
+	  bg = "#0f111a",
+	  diff_add_bg = "#003010",
+	  diff_change_bg = "#002030",
+	  active = "#353B49",
+	  float = "#3B4252",
+	  highlight= "#2f212a",
+	  highlight_dark = "#2f212a",
+	  selection = "#4C566A",
+  }, -- Overwrite default colors
 })
 
 vim.cmd([[
-colorscheme material
+  colorscheme onenord
 ]])
 

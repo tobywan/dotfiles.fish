@@ -45,6 +45,7 @@ return packer.startup(function(use)
 	use("lewis6991/impatient.nvim")
 
 	-- ui
+--[[
 	use({
 		"catppuccin/nvim",
 		as = "catppuccin",
@@ -52,6 +53,11 @@ return packer.startup(function(use)
 	use({
 		"marko-cerovac/material.nvim",
 		as = "material"
+	})
+--]]
+	use({
+		"rmehri01/onenord.nvim",
+		as = "onenord"
 	})
 	use("stevearc/dressing.nvim")
 	use("j-hui/fidget.nvim")

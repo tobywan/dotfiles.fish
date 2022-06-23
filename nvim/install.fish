@@ -1,8 +1,4 @@
 #!/usr/bin/env fish
-ln -sf (which nvim) (which vim)
-	or sudo ln -sf (which nvim) (which vim)
-	or ln -sf (which nvim) ~/.bin/vim
-
 abbr -a v 'nvim'
 
 nvim --headless "+PackerSync" "+quit!"
