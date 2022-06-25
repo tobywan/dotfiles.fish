@@ -1,6 +1,6 @@
 local options = {
 	compatible = false,
-	-- clipboard = "unnamedplus",
+	clipboard = "unnamedplus",
 	-- cmdheight = 2,
 	hidden = true,
 	updatetime = 300, -- faster update times
@@ -32,7 +32,7 @@ local options = {
 	autoread = true,
 	-- syntax = true,
 	completeopt = { "menu", "menuone", "noselect", "noinsert" },
-	colorcolumn = "80",
+	colorcolumn = "120",
 	foldmethod = "indent",
 	foldnestmax = 3,
 	foldminlines = 10,
@@ -42,7 +42,11 @@ local options = {
 	spelllang = { "en_us" },
 	laststatus = 3,
 	list = true,
-	listchars = "eol:↲,tab:» ,trail:·,extends:<,precedes:>,conceal:┊,nbsp:␣",
+	listchars = "eol:↲,tab:» ,trail:·,extends:<,precedes:>,conceal:┊,nbsp:␣,space:·",
+	-- guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
+	guicursor = "n-v-c:block,i-ci-ve:ver50,r-cr:hor20,o:hor50,a:blinkwait2000-blinkoff200-blinkon500-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175",
+	guifont = "monoid_nerd_font_mono:h14",
+
 }
 
 vim.opt.shortmess:append("c")

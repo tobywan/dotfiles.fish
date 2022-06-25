@@ -1,6 +1,6 @@
 -- theme from
 -- https://github.com/rmehri01/onenord.nvim
-local ok, catppuccin = pcall(require, "onenord")
+local ok, onenord = pcall(require, "onenord")
 if not ok then
     return
 end
@@ -67,6 +67,23 @@ require('onenord').setup({
       HopNextKey = { fg = colors.fg_light, style = "NONE"},
       HopNextKey1 = { fg = colors.cyan, style = "NONE"},
       LightspeedUnlabeledMatch = { fg = colors.fg_light, style = "NONE"},
+      Whitespace = { fg = "#1f212a"},
+      illuminatedWord = { bg = colors.none, style = "underline"},
+      IndentBlanklineChar = { fg ="#1f212a", style = "nocombine" },
+      NonText = { fg = "#202020" },
+	  --[[
+      termCursor = { fg = colors.yellow, bg = colors.red},
+	  TermCursorNC = { fg = colors.yellow, bg = colors.red},
+	  Cursor = { fg = colors.yellow, bg = colors.red},
+	  lCursor = { fg = colors.yellow, bg = colors.red},
+	  CursorIM = { fg = colors.yellow, bg = colors.red},
+	  NeoscrollHiddenCursor = { fg = colors.yellow, bg = colors.red},
+	  VimrInsertCursor = { fg = colors.yellow, bg = colors.red, style = "underline"},
+	  -- see also https://github.com/qvacua/vimr/blob/dd66d8e966c4935c4773045429ee5a5bd1e56f84/NvimView/Sources/NvimView/Resources/com.qvacua.NvimView.vim
+	  -- ]]
+
+
+
   }, -- Overwrite default highlight groups
   custom_colors = {
 	  bg = "#0f111a",
@@ -83,4 +100,3 @@ require('onenord').setup({
 vim.cmd([[
   colorscheme onenord
 ]])
-
