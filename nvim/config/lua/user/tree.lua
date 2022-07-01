@@ -6,18 +6,37 @@ end
 tree.setup({
 	view = {
 		side = "right",
+		adaptive_size = true,
+
 	},
 	update_focused_file = {
 		enable = true,
-		update_cwd = true,
+	--	update_root = true,
 		ignore_list = {},
 	},
-	update_cwd = true,
-	update_to_buf_dir = {
-		enable = true,
-		auto_open = true,
-  },
-
+	filesystem_watchers = {
+        enable = true,
+        interval = 100,
+    },
+	sync_root_with_cwd = true,
+    renderer = {
+      add_trailing = false,
+      group_empty = false,
+      highlight_git = true,
+      full_name = false,
+      highlight_opened_files = "none",
+      root_folder_modifier = ":~",
+      indent_markers = {
+        enable = true,
+        icons = {
+          corner = "└ ",
+          edge = "│ ",
+          item = "│ ",
+          none = "  ",
+        },
+      },
+    },
 })
 
-require("user.remap").nnoremap("<leader>tv", "<cmd>NvimTreeToggle<CR>")
+require("user.remap").nnoremap("<leader>tt", "<cmd>NvimTreeToggle<CR>")
+require("user.remap").nnoremap("<leader>tf", "<cmd>NvimTreeFocus<CR>")

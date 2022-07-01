@@ -4,7 +4,8 @@
 vim.g.neovide_refresh_rate = 140
 
 --Setting g:neovide_transparency to a value between 0.0 and 1.0 will set the opacity of the window to that value.
-vim.g.neovide_transparency = 0.8
+vim.g.neovide_transparency = 1.0
+-- vim.g.neovide_transparency = 0.8
 
 -- Setting g:neovide_floating_blur_amount_x and g:neovide_floating_blur_amount_y controls the blur radius on the respective axis for floating windows.
 vim.g.neovide_floating_blur_amount_x = 2.0

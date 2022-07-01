@@ -9,7 +9,7 @@ treesitter.setup({
 		disable = {},
 		additional_vim_regex_highlighting = true,
 	},
-	indent = {
+		indent = {
 		enable = false,
 		disable = { "yaml" },
 	},

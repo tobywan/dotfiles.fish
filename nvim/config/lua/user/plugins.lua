@@ -50,6 +50,20 @@ return packer.startup(function(use)
 		"catppuccin/nvim",
 		as = "catppuccin",
 	})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	use({
 		"marko-cerovac/material.nvim",
 		as = "material"
@@ -83,6 +97,12 @@ return packer.startup(function(use)
 	use("tpope/vim-abolish")
 	use("triglav/vim-visual-increment")
 	use("tpope/vim-speeddating")
+
+	-- Session management
+	use("rmagatti/auto-session")
+	use("rmagatti/session-lens")
+
+
 
 	-- telescope
 	use("nvim-lua/plenary.nvim")
