@@ -24,7 +24,7 @@ tree.setup({
       group_empty = false,
       highlight_git = true,
       full_name = false,
-      highlight_opened_files = "none",
+      highlight_opened_files = "all",
       root_folder_modifier = ":~",
       indent_markers = {
         enable = true,
@@ -35,6 +35,7 @@ tree.setup({
           none = "  ",
         },
       },
+	  symlink_destination = false,
     },
 })
 

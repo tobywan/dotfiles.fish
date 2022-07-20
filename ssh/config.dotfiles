@@ -1,8 +1,19 @@
 Host *
 	ServerAliveInterval 60
 	UseKeychain yes
+	IdentityFile ~/.ssh/id_ed25519_yubikey.pub
+
 
 Host localhost
 	UserKnownHostsFile /dev/null
 	StrictHostKeyChecking no
+
+# SSH over Session Manager
+Host i-* mi-*
+    User ec2-user
+    ProxyCommand sh -c "aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
+    DynamicForward 15432
+
+
+
 
