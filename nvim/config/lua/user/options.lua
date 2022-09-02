@@ -1,6 +1,7 @@
 local options = {
 	compatible = false,
-	clipboard = "unnamedplus",
+	-- clipboard = "unnamedplus",
+	-- cmdheight = 2,
 	hidden = true,
 	updatetime = 300, -- faster update times
 	mouse = "a",

@@ -1,13 +1,12 @@
 #!/usr/bin/env fish
 set -Ux EDITOR nvim
 set -Ux VISUAL $EDITOR
+set -Ux WEDITOR code
 
 set -Ux DOTFILES ~/.dotfiles
 set -Ux PROJECTS ~/code
 
 fish_add_path -a $DOTFILES/bin $HOME/.bin
-
-mkdir -p ~/.bin
 
 for f in $DOTFILES/*/functions
 	if not contains $f $fish_function_path
