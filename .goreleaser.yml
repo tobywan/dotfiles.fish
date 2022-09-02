@@ -4,11 +4,20 @@ changelog:
   sort: asc
   use: github
   groups:
-    - title: 'New Features'
-      regexp: "^.*feat[(\\w)]*:+.*$"
-      order: 0
-    - title: 'Bug fixes'
-      regexp: "^.*fix[(\\w)]*:+.*$"
-      order: 10
+    - title: 'editor'
+      regexp: "^.*\\(nvim\\):+.*$"
+      order: 200
+    - title: 'tmux'
+      regexp: "^.*\\(tmux\\):+.*$"
+      order: 250
+    - title: 'system'
+      regexp: "^.*\\((system|fish|fzf|macos|ssh)\\):+.*$"
+      order: 100
+    - title: 'git'
+      regexp: "^.*\\((git|gh)\\):+.*$"
+      order: 300
+    - title: 'terminals'
+      regexp: "^.*\\((kitty|wezterm|alacritty)\\):+.*$"
+      order: 400
     - title: Other work
       order: 999

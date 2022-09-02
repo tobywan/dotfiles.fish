@@ -1,9 +1,11 @@
 #!/usr/bin/env fish
-abbr -a v 'nvim'
-
-nvim --headless "+PackerSync" "+quit!"
-
-# null-ls formatting for lua
-if command -qs cargo
-	cargo install stylua
+if not command -qs nvim
+	exit
 end
+
+abbr -a e 'nvim'
+abbr -a v 'nvim'
+abbr -a vim 'nvim'
+
+# update plugins
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync' &>/dev/null

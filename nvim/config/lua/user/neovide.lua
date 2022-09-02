@@ -23,7 +23,6 @@ vim.g.neovide_remember_window_size = true
 -- Setting this to true enables the profiler, which shows a frametime graph in the upper left corner.
 vim.g.neovide_profiler = false
 
-
 -- Setting g:neovide_input_use_logo to a boolean value will change how logo key (also known as super key, command key or windows key) is handled, allowing all key combinations containing logo to be forwarded to neovim.
 vim.g.neovide_input_use_logo = false
 
@@ -100,7 +99,3 @@ vim.g.neovide_cursor_vfx_particle_phase = 1.5
 vim.g.neovide_cursor_vfx_particle_curl = 1.0
 -- Sets the ... I guess curl. I believe it has something to do with how
 -- the particles rotate in the Railgun trail. Again, go bug @jonvaldes.
-
-
-
-

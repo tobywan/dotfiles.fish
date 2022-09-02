@@ -5,9 +5,9 @@ end
 
 lualine.setup({
 	options = {
-		section_separators = { left = '', right = '' },
-		component_separators = { left = '', right = '' },
-		theme = "onenord",
+		section_separators = { left = "", right = "" },
+		component_separators = { left = "", right = "" },
+		theme = "tokyonight",
 		component_separators = "",
 		section_separators = "",
 	},

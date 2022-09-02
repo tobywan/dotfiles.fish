@@ -20,7 +20,7 @@
 	ui = true
 [core]
 	excludesfile = ~/.gitignore
-	editor = vim
+	editor = nvim
 	compression = -1
 	autocrlf = input
 	whitespace = trailing-space,space-before-tab
@@ -39,6 +39,7 @@
 	extendRegexp = true
 	lineNumber = true
 [push]
+	autoSetupRemote = true
 	default = simple
 [submodule]
 	fetchJobs = 4
@@ -58,11 +59,13 @@
 [format]
 	signOff = true
 [diff]
-    tool = nvimdiff
-[difftool "nvimdiff"]
-    cmd = nvim -d "$LOCAL" "$REMOTE"
+    tool = meld
+[difftool]
+    prompt = false
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
 [merge]
-    tool = nvimmerge
-[mergetool "nvimmerge"]
-    cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
-
+    tool = meld
+[mergetool "meld"]
+    # Choose one of these 2 lines (not both!) explained below.
+    cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
