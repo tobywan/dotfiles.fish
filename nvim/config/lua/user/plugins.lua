@@ -98,8 +98,8 @@ return packer.startup(function(use)
 	use("tpope/vim-speeddating")
 
 	-- Session management
-	use("rmagatti/auto-session")
-	use("rmagatti/session-lens")
+--	use("rmagatti/auto-session")
+--	use("rmagatti/session-lens")
 
 
 

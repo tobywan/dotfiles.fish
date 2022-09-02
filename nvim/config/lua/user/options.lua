@@ -1,7 +1,6 @@
 local options = {
 	compatible = false,
 	clipboard = "unnamedplus",
-	cmdheight = 2,
 	hidden = true,
 	updatetime = 300, -- faster update times
 	mouse = "a",
@@ -46,7 +45,7 @@ local options = {
 	-- guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 	guicursor = "n-v-c:block,i-ci-ve:ver50,r-cr:hor20,o:hor50,a:blinkwait2000-blinkoff200-blinkon500-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175",
 	guifont = "monoid_nerd_font_mono:h14",
-
+	sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal",
 }
 
 vim.opt.shortmess:append("c")
@@ -73,4 +72,5 @@ vim.cmd([[
 	set formatoptions-=cro
 	set expandtab
 	set tabstop=2
+	set cmdheight=2
 ]])
