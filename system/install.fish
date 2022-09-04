@@ -1,5 +1,7 @@
 #!/usr/bin/env fish
-abbr -a less 'less -r'
+
+# Don't ls raw by default
+# abbr -a less 'less -r'
 
 if command -qs exa
 	abbr -a l 'exa -lh --icons'
