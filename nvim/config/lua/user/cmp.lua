@@ -108,5 +108,22 @@ cmp.setup.cmdline("/", {
 		{ name = "path" },
 	},
 })
-
-cmp.event:on("confirm_done", require("nvim-autopairs.completion.cmp").on_confirm_done({ map_char = { tex = "" } }))
+local handlers = require("nvim-autopairs.completion.handlers")
+cmp.event:on(
+	"confirm_done",
+	require("nvim-autopairs.completion.cmp").on_confirm_done({
+		filetypes = {
+			-- "*" is a alias to all filetypes
+			["*"] = {
+				["("] = {
+					kind = {
+						cmp.lsp.CompletionItemKind.Function,
+						cmp.lsp.CompletionItemKind.Method,
+					},
+					handler = handlers["*"],
+				},
+			},
+			markdown = false,
+		},
+	})
+)

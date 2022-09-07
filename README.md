@@ -75,7 +75,7 @@ In cases a file already existed, the boostrap script should have created a `.bac
 To install them all with `brew`:
 
 ```console
-$ brew install fish git-delta fzf gh grc kubectx starship zoxide fd exa bat alacritty kitty neovim
+$ brew install fish git-delta fzf gh grc kubectx starship zoxide fd exa bat alacritty kitty neovim tmux
 ```
 
 On Ubuntu:

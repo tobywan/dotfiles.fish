@@ -125,7 +125,9 @@ packer.startup(function(use)
 	use({
 		"windwp/nvim-autopairs",
 		config = function()
-			require("nvim-autopairs").setup({})
+			require("nvim-autopairs").setup({
+				disable_filetype = { "TelescopePrompt", "markdown" },
+			})
 		end,
 	})
 
@@ -294,7 +296,8 @@ packer.startup(function(use)
 			vim.api.nvim_create_autocmd("TextYankPost", {
 				callback = function()
 					vim.cmd([[
-						if v:event.operator is 'y' && v:event.regname is '+' | execute 'OSCYankReg +' | endif
+						if v:event.operator is 'y' && v:event.regname is '' | execute 'OSCYankReg "' | endif
+
 					]])
 				end,
 				pattern = "*",

@@ -181,12 +181,12 @@ window:
     y: 5
   dynamic_padding: true
   opacity: 0.95
-  decorations: none
+  decorations: buttonless
   dynamic_title: true
   dimensions:
    columns: 240
    lines: 80
-  startup_mode: Maximized
+  startup_mode: Windowed
 
 
 #scrolling:
@@ -340,7 +340,7 @@ font:
   bold_italic:
     family: Monoid Nerd Font
     style: Italic
-  size: 15.0
+  size: 14.0
   use_thin_strokes: true
   draw_bold_text_with_bright_colors: true
 
@@ -350,7 +350,7 @@ font:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  #save_to_clipboard: false
+  save_to_clipboard: true
 
 #cursor:
   # Cursor style
@@ -419,6 +419,7 @@ key_bindings:
   - { key: T,        mods: Alt,     chars: "\x1bt"          }
   - { key: U,        mods: Alt,     chars: "\x1bu"          }
   - { key: C,        mods: Alt,     chars: "\x1bc"          }
+  - { key: Key3,     mods: Alt,     chars: "#"              }
 
 mouse_bindings:
   - { mouse: Middle, action: PasteSelection }

@@ -48,6 +48,7 @@ local options = {
 	guifont = "monoid_nerd_font_mono:h14",
 	sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal",
 	grepprg = "rg --vimgrep --smart-case --follow",
+	conceallevel = 0,
 }
 
 vim.opt.shortmess:append("c")
@@ -63,4 +64,5 @@ vim.cmd([[
 	set expandtab
 	set tabstop=2
 	set cmdheight=2
+	let g:oscyank_term = 'default'
 ]])
