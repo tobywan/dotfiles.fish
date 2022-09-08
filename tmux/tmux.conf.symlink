@@ -3,7 +3,11 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
-run -b '~/.tmux/plugins/tpm/tpm'
+
+set -g @scroll-speed-num-lines-per-scroll 1
+set -g @plugin 'nhdaly/tmux-better-mouse-mode'
+
+
 
 set -g default-terminal "xterm-256color"
 set -as terminal-features ',xterm-256color:clipboard'
@@ -64,6 +68,8 @@ bind r source-file ~/.tmux.conf
 bind-key -r f display-popup -E "tmux-sessionizer"
 bind-key -r g run-shell "tmux neww tmux-sessionizer default"
 
+# Mouse plugin
+
 thm_bg="#1a1b26"
 thm_fg="#a9b1d6"
 thm_gray="#787c99"
@@ -91,3 +97,5 @@ setw -g window-status-format "#[fg=$thm_bg,bg=$thm_blue] #I #(icons #{pane_curre
 setw -g window-status-current-format "#[fg=$thm_bg,bg=$thm_green] #I #(icons #{pane_current_command}) #[fg=$thm_fg,bg=$thm_bg] #{b:pane_current_path} "
 setw -g clock-mode-colour "${thm_blue}"
 setw -g mode-style "fg=${thm_pink} bg=${thm_black4} bold"
+
+run -b '~/.tmux/plugins/tpm/tpm'

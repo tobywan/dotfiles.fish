@@ -198,7 +198,7 @@ window:
   #multiplier: 3
 scrolling:
   history: 10000
-  multiplier: 3
+  multiplier: 1
   auto_scroll: false
 
 tabspaces: 4
