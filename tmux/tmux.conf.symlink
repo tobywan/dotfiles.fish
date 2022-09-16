@@ -78,6 +78,7 @@ thm_pink="#449dab"
 thm_green="#9ece6a"
 thm_blue="#7aa2f7"
 thm_black4="#32344a"
+thm_orange="#fd8b52"
 
 set -g status "on"
 set -g status-bg "${thm_bg}"
@@ -87,7 +88,7 @@ set -g status-right-length "100"
 set -g message-style fg="${thm_fg}",bg="${thm_gray}",align="centre"
 set -g message-command-style fg="${thm_blue}",bg="${thm_gray}",align="centre"
 set -g pane-border-style fg="${thm_gray}"
-set -g pane-active-border-style fg="${thm_blue}"
+set -g pane-active-border-style fg="${thm_orange}"
 setw -g window-status-activity-style fg="${thm_fg}",bg="${thm_bg}",none
 setw -g window-status-separator ""
 setw -g window-status-style fg="${thm_fg}",bg="${thm_bg}",none
