@@ -30,10 +30,7 @@ packer.startup(function(use)
 	use({
 		"rmagatti/auto-session",
 		config = function()
-			require("auto-session").setup({
-				auto_save_enabled = true,
-				auto_restore_enabled = true,
-			})
+			require("user.session")
 		end,
 	})
 
@@ -130,10 +127,17 @@ packer.startup(function(use)
 
 	use({
 		"akinsho/bufferline.nvim",
+		requires = {
+			"famiu/bufdelete.nvim",
+			"kyazdani42/nvim-web-devicons",
+		},
 		config = function()
 			require("bufferline").setup({
 				options = {
 					diagnostics = "nvim_lsp",
+					close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
+					right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
+					highlights = require("catppuccin.groups.integrations.bufferline").get(),
 				},
 			})
 		end,
@@ -226,6 +230,9 @@ packer.startup(function(use)
 			"saadparwaiz1/cmp_luasnip",
 			"L3MON4D3/LuaSnip",
 			"rafamadriz/friendly-snippets",
+
+			-- autopairs (x cmp)
+			"windwp/nvim-autopairs",
 		},
 		config = function()
 			require("lspkind").init()
@@ -234,6 +241,7 @@ packer.startup(function(use)
 				region_check_events = "CursorHold,InsertLeave,InsertEnter",
 				delete_check_events = "TextChanged,InsertEnter",
 			})
+			require("nvim-autopairs").setup()
 			require("luasnip.loaders.from_vscode").load()
 			require("user.lsp")
 			require("user.symbols-outline")
@@ -304,13 +312,6 @@ packer.startup(function(use)
 		"vim-test/vim-test",
 		config = function()
 			require("user.test")
-		end,
-	})
-
-	use({
-		"famiu/bufdelete.nvim",
-		config = function()
-			require("user.remap").nnoremap("<leader>q", ":lua require('bufdelete').bufdelete(0, false)<CR>")
 		end,
 	})
 

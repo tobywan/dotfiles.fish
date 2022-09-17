@@ -5,9 +5,15 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "*.txt", "*.md", "*.tex", "gitcommit", "gitrebase" },
+	pattern = { "*.txt", "*.md", "*.tex", "gitcommit", "gitrebase", "NeogitCommitMessage" },
 	command = "setlocal spell",
 	group = vim.api.nvim_create_augroup("Spell", { clear = true }),
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "gitcommit", "NeogitCommitMessage" },
+	command = 'execute "normal! O" | startinsert',
+	group = vim.api.nvim_create_augroup("AutoInsert", { clear = true }),
 })
 
 -- ensure the parent folder exists, so it gets properly added to the lsp context and everything just works.
