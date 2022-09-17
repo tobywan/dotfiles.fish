@@ -1,2 +1,2 @@
 #!/usr/bin/env fish
- source /opt/homebrew/opt/asdf/libexec/asdf.fish
+ source (brew --prefix)/opt/asdf/libexec/asdf.fish
