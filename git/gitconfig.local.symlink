@@ -57,14 +57,15 @@
     defaultBranch = main
 [format]
 	signOff = true
-[diff]
-    tool = meld
-[difftool]
-    prompt = false
-[difftool "meld"]
-    cmd = meld "$LOCAL" "$REMOTE"
 [merge]
-    tool = meld
-[mergetool "meld"]
-    # Choose one of these 2 lines (not both!) explained below.
-    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+        tool = p4mergetool
+[mergetool "p4mergetool"]
+        cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
+        trustExitCode = false
+[mergetool]
+        keepBackup = false
+[diff]
+        tool = p4mergetool
+[difftool "p4mergetool"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $autoSetupRemote
+
