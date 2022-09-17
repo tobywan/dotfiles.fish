@@ -10,11 +10,12 @@ require("lualine").setup({
 		lualine_c = {
 			{
 				"filetype",
-				icon_only = true,
+				icon_only = false,
+				icon = { align = 'left' }
 			},
 			{
 				"filename",
-				file_status = false,
+				file_status = true,
 				path = 1,
 			},
 		},

@@ -49,7 +49,31 @@ packer.startup(function(use)
 	use({
 		"folke/tokyonight.nvim",
 		config = function()
-			require("user.colorscheme")
+			require("tokyonight").setup({
+				style = "night",
+				transparent = false,
+				styles = {
+					-- Style to be applied to different syntax groups
+					-- Value is any valid attr-list value for `:help nvim_set_hl`
+					comments = { italic = true },
+					keywords = { italic = true },
+					functions = {},
+					variables = {},
+					-- Background styles. Can be "dark", "transparent" or "normal"
+					sidebars = "normal", -- style for sidebars, see below
+					floats = "dark", -- style for floating windows
+				},
+				-- :set filetype? to show current filetype
+				sidebars = { "qf", "vista_kind", "terminal", "packer", "NvimTree" },
+				dim_inactive = true,
+				on_colors = function(colors)
+					colors.hint = colors.orange
+					colors.error = "#ff0000"
+				end
+
+			})
+			vim.cmd([[colorscheme tokyonight]])
+
 		end,
 	})
 
