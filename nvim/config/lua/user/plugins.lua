@@ -18,7 +18,6 @@ packer.init({
 
 packer.startup(function(use)
 	use("wbthomason/packer.nvim") -- Have packer manage itself
-	use("antoinemadec/FixCursorHold.nvim")
 
 	use({
 		"lewis6991/impatient.nvim",
@@ -128,15 +127,15 @@ packer.startup(function(use)
 	use({
 		"akinsho/bufferline.nvim",
 		requires = {
-			"famiu/bufdelete.nvim",
+			"mhinz/vim-sayonara",
 			"kyazdani42/nvim-web-devicons",
 		},
 		config = function()
 			require("bufferline").setup({
 				options = {
 					diagnostics = "nvim_lsp",
-					close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
-					right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
+					close_command = "Sayonara!", -- can be a string | function, see "Mouse actions"
+					right_mouse_command = "Sayonara!", -- can be a string | function, see "Mouse actions"
 					indicator = {
 						style = "icon",
 						icon = ""
@@ -278,7 +277,6 @@ packer.startup(function(use)
 		requires = {
 			"nvim-treesitter/nvim-treesitter-textobjects",
 			"nvim-treesitter/nvim-treesitter-context",
-			"lewis6991/spellsitter.nvim",
 		},
 	})
 
@@ -327,8 +325,7 @@ packer.startup(function(use)
 			vim.api.nvim_create_autocmd("TextYankPost", {
 				callback = function()
 					vim.cmd([[
-						if v:event.operator is 'y' && v:event.regname is '' | execute 'OSCYankReg "' | endif
-
+						if v:event.operator is 'y' && v:event.regname is '+' | execute 'OSCYankReg +' | endif
 					]])
 				end,
 				pattern = "*",

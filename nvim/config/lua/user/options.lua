@@ -3,7 +3,7 @@ local options = {
 	-- clipboard = "unnamedplus",
 	-- cmdheight = 2,
 	hidden = true,
-	updatetime = 300, -- faster update times
+	updatetime = 1000, -- faster update times, default 4000
 	mouse = "a",
 	inccommand = "split",
 	splitbelow = true,
@@ -48,7 +48,6 @@ local options = {
 	guifont = "monoid_nerd_font_mono:h14",
 	sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal",
 	grepprg = "rg --vimgrep --smart-case --follow",
-	conceallevel = 0,
 }
 
 vim.opt.shortmess:append("c")
