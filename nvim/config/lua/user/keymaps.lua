@@ -12,6 +12,9 @@ vim.g.maplocalleader = " "
 -- disable Ex mode, I always enter in it by mistake
 keymap("n", "Q", "<Nop>", opts)
 
+-- create and edit new buffer
+keymap("n", "<leader>n", ":enew<CR>", opts)
+
 -- quicklists
 keymap("n", "<leader>co", ":copen<CR>", opts)
 keymap("n", "<leader>cc", ":cclose<CR>", opts)
@@ -33,7 +36,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- save and quit
 keymap("n", "<leader>w", ":write<CR>", opts)
-keymap("n", "<leader>q", ":Bdelete<CR>", opts)
+keymap("n", "<leader>q", ":Sayonara!<CR>", opts)
 
 -- paste over without replacing default register
 keymap("n", "<leader>p", '"_dP', opts)
