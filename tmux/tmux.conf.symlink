@@ -62,6 +62,17 @@ bind -r k select-pane -U
 bind -r j select-pane -D
 bind -r h select-pane -L
 bind -r l select-pane -R
+bind -r 0  select-pane -t 0
+bind -r 1  select-pane -t 1
+bind -r 2  select-pane -t 2
+bind -r 3  select-pane -t 3
+bind -r 4  select-pane -t 4
+bind -r 5  select-pane -t 5
+bind -r 6  select-pane -t 6
+bind -r 7  select-pane -t 7
+bind -r 8  select-pane -t 8
+bind -r 9  select-pane -t 9
+
 set-option -g repeat-time 0
 bind r source-file ~/.tmux.conf
 

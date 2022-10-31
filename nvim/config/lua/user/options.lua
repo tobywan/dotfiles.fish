@@ -1,7 +1,6 @@
 local options = {
 	compatible = false,
-	-- clipboard = "unnamedplus",
-	-- cmdheight = 2,
+	clipboard = "unnamedplus",
 	hidden = true,
 	updatetime = 1000, -- faster update times, default 4000
 	mouse = "a",
@@ -43,6 +42,7 @@ local options = {
 	cursorline = true,
 	list = false,
 	colourscheme = tokyonight,
+
 	listchars = "eol:↲,tab:» ,trail:·,extends:<,precedes:>,conceal:┊,nbsp:␣,space:·",
 	guicursor = "n-v-c:block,i-ci-ve:ver50,r-cr:hor20,o:hor50,a:blinkwait2000-blinkoff200-blinkon500-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175",
 	guifont = "monoid_nerd_font_mono:h14",
@@ -62,6 +62,6 @@ vim.cmd([[
 	set formatoptions-=cro
 	set expandtab
 	set tabstop=2
-	set cmdheight=2
+	set cmdheight=0
 	let g:oscyank_term = 'default'
 ]])

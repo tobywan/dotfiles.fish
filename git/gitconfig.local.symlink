@@ -67,6 +67,8 @@
 	keepBackup = false
 [diff]
     tool = p4merge
+[difftool]
+	prompt = false
 [difftool "p4merge"]
-	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$REMOTE\"" "\"$LOCAL\""
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$LOCAL\"" "\"$REMOTE\""
 

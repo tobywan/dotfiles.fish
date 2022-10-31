@@ -15,6 +15,9 @@ Host i-* mi-*
     User ec2-user
     ProxyCommand sh -c "aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
     DynamicForward 15432
+#dev
+    LocalForward 15672 172.19.1.185:15672
+
 
 
 
