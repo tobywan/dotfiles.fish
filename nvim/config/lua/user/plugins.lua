@@ -13,17 +13,17 @@ if not status_ok then
 end
 
 local colors = {
-		foreground = "#c0caf5",
-		selection = "#33467C",
-		comment = "#565f89",
-		red = "#f7768e",
-		orange = "#ff9e64",
-		yellow = "#e0af68",
-		green = "#9ece6a",
-		purple = "#9d7cd8",
-		cyan = "#7dcfff",
-		pink = "#bb9af7",
-	}
+	foreground = "#c0caf5",
+	selection = "#33467C",
+	comment = "#565f89",
+	red = "#f7768e",
+	orange = "#ff9e64",
+	yellow = "#e0af68",
+	green = "#9ece6a",
+	purple = "#9d7cd8",
+	cyan = "#7dcfff",
+	pink = "#bb9af7",
+}
 
 packer.init({
 	autoremove = true,
@@ -38,7 +38,6 @@ packer.startup(function(use)
 			require("impatient").enable_profile()
 		end,
 	})
-
 
 	use({
 		"fgheng/winbar.nvim",
@@ -95,6 +94,29 @@ packer.startup(function(use)
 				default = true,
 			})
 		end,
+	})
+
+	-- install without yarn or npm
+	-- from command line
+	-- cd ~/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim/
+	-- yarn install
+	-- export NODE_OPTIONS=--openssl-legacy-provider
+	-- yarn build
+
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	})
+
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
 	})
 
 	use({

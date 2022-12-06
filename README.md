@@ -65,7 +65,7 @@ with the same name.
   terminal emulator;
 - [`bat`](https://github.com/sharkdp/bat) a cat(1) clone with wings;
 - [`delta`](https://github.com/dandavison/delta) for better git diffs;
-- [`fd`](https://github.com/sharkdp/fd) a simple, fast and user-friendly
+- [`fd`](https://github.com/sharkdp/fd) a simple, fast and user-friendly:
   alternative to `find`;
 - [`fzf`](https://github.com/junegunn/fzf) for a fuzzy-finder;
 - [`gum`](https://github.com/charmbracelet/gum) A tool for glamorous shell
