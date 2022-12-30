@@ -103,12 +103,12 @@ packer.startup(function(use)
 	-- export NODE_OPTIONS=--openssl-legacy-provider
 	-- yarn build
 
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = function()
-			vim.fn["mkdp#util#install"]()
-		end,
-	})
+	-- use({
+	-- 	"iamcco/markdown-preview.nvim",
+	-- 	run = function()
+	-- 		vim.fn["mkdp#util#install"]()
+	-- 	end,
+	-- })
 
 	use({
 		"iamcco/markdown-preview.nvim",
@@ -249,7 +249,21 @@ packer.startup(function(use)
 	use({
 		"folke/which-key.nvim",
 		config = function()
-			require("which-key").setup()
+			require("which-key").setup({
+				window = {
+					border = "single", -- none, single, double, shadow
+					position = "bottom", -- bottom, top
+					margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
+					padding = { 1, 1, 1, 1 }, -- extra window padding [top, right, bottom, left]
+					winblend = 10,
+				},
+				layout = {
+					height = { min = 4, max = 25 }, -- min and max height of the columns
+					width = { min = 20, max = 50 }, -- min and max width of the columns
+					spacing = 31, -- spacing between columns
+					align = "left", -- align columns left, center or right
+				},
+			})
 		end,
 	})
 

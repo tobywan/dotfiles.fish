@@ -21,7 +21,9 @@ if command -qs batcat
 end
 if command -qa bat
 	alias --save cat=bat
-	set -Ux MANPAGER "sh -c 'col -bx | bat -l man -p'"
+    # see https://github.com/sharkdp/bat/issues/2219
+	set -Ux MANPAGER "sh -c 'bat -l man -p'"
+	# set -Ux MANPAGER "sh -c 'col -bx | bat -l man -p'"
 end
 
 if command -qs zoxide

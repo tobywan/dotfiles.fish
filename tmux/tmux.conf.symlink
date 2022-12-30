@@ -9,7 +9,7 @@ set -g @plugin 'nhdaly/tmux-better-mouse-mode'
 
 
 
-set -g default-terminal "xterm-256color"
+set -g default-terminal "screen-256color"
 set -as terminal-features ',xterm-256color:clipboard'
 set -ga terminal-overrides ",*256col*:Tc"
 setenv -g COLORTERM truecolor

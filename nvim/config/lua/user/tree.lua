@@ -33,5 +33,5 @@ require("nvim-tree").setup({
 	},
 })
 
-require("user.remap").nnoremap("<leader>tt", "<cmd>NvimTreeToggle<CR>")
-require("user.remap").nnoremap("<leader>tf", "<cmd>NvimTreeFocus<CR>")
+require("user.remap").nnoremap("<leader>rt", "<cmd>NvimTreeToggle<CR>")
+require("user.remap").nnoremap("<leader>rf", "<cmd>NvimTreeFocus<CR>")

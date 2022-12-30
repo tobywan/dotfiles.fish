@@ -48,6 +48,8 @@ local options = {
 	guifont = "monoid_nerd_font_mono:h14",
 	sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal",
 	grepprg = "rg --vimgrep --smart-case --follow",
+	-- https://neovim.io/doc/user/options.html#'timeoutlen' Time in milliseconds to wait for a mapped sequence to complete.
+	timeoutlen = 250,
 }
 
 vim.opt.shortmess:append("c")
