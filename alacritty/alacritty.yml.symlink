@@ -180,7 +180,8 @@ window:
     x: 5
     y: 5
   dynamic_padding: true
-  opacity: 0.97
+  opacity: 1
+    #opacity: 0.97
   decorations: buttonless
   dynamic_title: true
   dimensions:
@@ -329,19 +330,20 @@ bell:
 
 font:
   normal:
-    family: Monoid Nerd Font
+    family: VictorMono Nerd Font
     style:  Regular
   bold:
-    family: Monoid Nerd Font
-    style: Regular
+    family: VictorMono Nerd Font
+    style: SemiBold
   italic:
-    family: Monoid Nerd Font
-    style: Italic
+    family: VictorMono Nerd Font
+    style: Oblique
   bold_italic:
-    family: Monoid Nerd Font
+    family: VictorMono Nerd Font
     style: Italic
-  size: 14.0
-  draw_bold_text_with_bright_colors: true
+  size: 16.0
+    #draw_bold_text_with_bright_colors: true
+  draw_bold_text_with_bright_colors: false
 
 #selection:
   # This string contains all characters that are used as separators for

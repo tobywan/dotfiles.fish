@@ -136,6 +136,10 @@ mkdir -p $__fish_config_dir/completions/
 	and success 'completions'
 	or abort 'completions'
 
+mkdir -p $HOME/.bin/
+	and success 'local-dirs'
+	or abort 'local-dirs'
+
 for installer in */install.fish
 	$installer
 		and success $installer
