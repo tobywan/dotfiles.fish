@@ -63,6 +63,7 @@ with the same name.
 
 - [`alacritty`](https://github.com/alacritty/alacritty) a cross-platform, OpenGL
   terminal emulator;
+- [`asdf`](https://asdf-vm.com/) version manager;
 - [`bat`](https://github.com/sharkdp/bat) a cat(1) clone with wings;
 - [`delta`](https://github.com/dandavison/delta) for better git diffs;
 - [`fd`](https://github.com/sharkdp/fd) a simple, fast and user-friendly:
@@ -73,19 +74,19 @@ with the same name.
 - [`gh`](https://github.com/cli/cli) for more GitHub integration with the
   terminal;
 - [`grc`](https://github.com/garabik/grc) to colorize command's outputs;
+- [`kitty`](https://github.com/kovidgoyal/kitty) a cross-platform, fast,
+  feature-rich, GPU based terminal;
 - [`kubectx`](https://github.com/ahmetb/kubectx) for better Kubernetes context
   and namespaces switch;
 - [`neovim`](https://neovim.io) extensible Vim-based text editor;
+- [`node.js`](https://nodejs.org/en/) Node and npm;
+- [`ripgrep`](https://github.com/BurntSushi/ripgrep) recursive find for live grep;
 - [`starship.rs`](https://starship.rs) the shell prompt we are using;
-- [`asdf`](https://asdf-vm.com/) version manager
-- [`node.js`](https://nodejs.org/en/) Node and npm
-- [`ripgrep`](https://github.com/BurntSushi/ripgrep) recursive find for live
-  grep
 
 To install them all with `brew`:
 
 ```console
-$ brew install fish git-delta fzf gh grc kubectx starship zoxide fd exa bat alacritty neovim tmux asdf node ripgrep
+$ brew install fish git-delta fzf gh grc kubectx starship zoxide fd exa bat alacritty kitty neovim tmux asdf node ripgrep
 ```
 
 ## fonts
