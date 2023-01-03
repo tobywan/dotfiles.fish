@@ -266,8 +266,8 @@ packer.startup(function(use)
 				},
 				layout = {
 					height = { min = 4, max = 25 }, -- min and max height of the columns
-					width = { min = 20, max = 50 }, -- min and max width of the columns
-					spacing = 31, -- spacing between columns
+					width = { min = 10, max = 60 }, -- min and max width of the columns
+					spacing = 3, -- spacing between columns
 					align = "left", -- align columns left, center or right
 				},
 			})
