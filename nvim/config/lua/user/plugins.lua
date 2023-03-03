@@ -200,13 +200,6 @@ packer.startup(function(use)
 	})
 
 	use({
-		"ggandor/leap.nvim",
-		config = function()
-			require("leap").add_default_mappings()
-		end,
-	})
-
-	use({
 		"akinsho/bufferline.nvim",
 		requires = {
 			"mhinz/vim-sayonara",
