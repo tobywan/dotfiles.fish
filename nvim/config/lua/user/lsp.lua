@@ -1,4 +1,5 @@
-local cmp_nvim_lsp = require("cmp_nvim_lsp")
+ocal
+cmp_nvim_lsp = require("cmp_nvim_lsp")
 local lspstatus = require("lsp-status")
 lspstatus.config({
 	status_symbol = "⬤ ",
@@ -57,7 +58,7 @@ local on_attach = function(client, bufnr)
 	-- buf_set_keymap("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 	buf_set_keymap("n", "<leader>lr", "<cmd>LspRestart<CR>", opts)
 
-	if client.server_capabilities.documentFormattingProvider and client.name ~= "sumneko_lua" then
+	if client.server_capabilities.documentFormattingProvider and client.name ~= "lua_ls" then
 		vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 			callback = function()
 				if vim.lsp.buf.server_ready() then
@@ -71,7 +72,7 @@ local on_attach = function(client, bufnr)
 	-- If the organizeImports codeAction runs for lua files, depending on
 	-- where the cursor is, it'll reorder the args and break stuff.
 	-- This took me way too long to figure out.
-	if client.name ~= "null-ls" and client.name ~= "sumneko_lua" then
+	if client.name ~= "null-ls" and client.name ~= "lua_ls" then
 		vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 			pattern = "<buffer>",
 			callback = function()
@@ -167,7 +168,7 @@ lspconfig.dockerls.setup({
 	on_attach = on_attach,
 })
 
-lspconfig.sumneko_lua.setup({
+lspconfig.lua_ls.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 	select_symbol = function(cursor_pos, symbol)
