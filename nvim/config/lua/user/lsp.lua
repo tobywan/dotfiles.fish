@@ -1,5 +1,4 @@
-ocal
-cmp_nvim_lsp = require("cmp_nvim_lsp")
+local cmp_nvim_lsp = require("cmp_nvim_lsp")
 local lspstatus = require("lsp-status")
 lspstatus.config({
 	status_symbol = "⬤ ",
