@@ -41,7 +41,6 @@ local options = {
 	laststatus = 3,
 	cursorline = true,
 	list = false,
-	colourscheme = tokyonight,
 
 	listchars = "eol:↲,tab:» ,trail:·,extends:<,precedes:>,conceal:┊,nbsp:␣,space:·",
 	guicursor = "n-v-c:block,i-ci-ve:ver50,r-cr:hor20,o:hor50,a:blinkwait2000-blinkoff200-blinkon500-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175",

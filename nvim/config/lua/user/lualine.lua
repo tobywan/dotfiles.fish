@@ -3,16 +3,17 @@ require("lualine").setup({
 		section_separators = { left = "", right = "" },
 		component_separators = { left = "", right = "" },
 		theme = "tokyonight",
-		component_separators = "",
-		section_separators = "",
 	},
 	sections = {
 		lualine_c = {
 			{
 				"filetype",
 				icon_only = false,
-				icon = { align = 'left' }
+				icon = { align = "left" },
 			},
+			function()
+				return require("lsp-status").status()
+			end,
 			{
 				"filename",
 				file_status = true,
@@ -20,10 +21,14 @@ require("lualine").setup({
 			},
 		},
 		lualine_x = {
-			function()
-				return require("lsp-status").status()
-			end,
-			"encoding",
+			"windows",
+		},
+		lualine_y = {
+			"progress",
+		},
+		lualine_z = {
+			"selectioncount",
+			"location",
 		},
 	},
 })

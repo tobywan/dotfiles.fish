@@ -12,18 +12,18 @@ if not status_ok then
 	return
 end
 
-local colors = {
-	foreground = "#c0caf5",
-	selection = "#33467C",
-	comment = "#565f89",
-	red = "#f7768e",
-	orange = "#ff9e64",
-	yellow = "#e0af68",
-	green = "#9ece6a",
-	purple = "#9d7cd8",
-	cyan = "#7dcfff",
-	pink = "#bb9af7",
-}
+-- local colors = {
+-- 	foreground = "#c0caf5",
+-- 	selection = "#33467C",
+-- 	comment = "#565f89",
+-- 	red = "#f7768e",
+-- 	orange = "#ff9e64",
+-- 	yellow = "#e0af68",
+-- 	green = "#9ece6a",
+-- 	purple = "#9d7cd8",
+-- 	cyan = "#7dcfff",
+-- 	pink = "#bb9af7",
+-- }
 
 packer.init({
 	autoremove = true,
