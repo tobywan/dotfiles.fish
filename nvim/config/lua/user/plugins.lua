@@ -408,6 +408,22 @@ packer.startup(function(use)
 		end,
 	})
 
+
+	use({
+		"nathom/filetype.nvim",
+		config = function()
+			require("filetype").setup {
+				overrides = {
+					extensions = {
+						tf = "terraform",
+						tfvars = "terraform",
+						tfstate = "json",
+					},
+				},
+			}
+		end,
+	})
+
 	use({
 		"ojroques/vim-oscyank",
 		config = function()
