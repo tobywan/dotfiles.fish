@@ -112,6 +112,7 @@ require("mason-lspconfig").setup({
 })
 
 local lspconfig = require("lspconfig")
+
 lspconfig.gopls.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
@@ -160,6 +161,35 @@ lspconfig.terraformls.setup({
 lspconfig.tflint.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+})
+
+lspconfig.pylsp.setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	settings = {
+		pylsp = {
+			plugins = {
+				pycodestyle = {
+					-- see flake8 rules e.g.
+					-- ignore = { "W391" },
+					maxLineLength = 100,
+				},
+			},
+		},
+	},
+})
+
+lspconfig.pylyzer.setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	settings = {
+		python = {
+			checkOnType = false,
+			diagnostics = true,
+			inlayHints = true,
+			smartCompletion = true,
+		},
+	},
 })
 
 lspconfig.dockerls.setup({
