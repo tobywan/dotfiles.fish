@@ -179,18 +179,32 @@ lspconfig.pylsp.setup({
 	},
 })
 
-lspconfig.pylyzer.setup({
+lspconfig.pyright.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 	settings = {
 		python = {
-			checkOnType = false,
-			diagnostics = true,
-			inlayHints = true,
-			smartCompletion = true,
+			analysis = {
+				autoSearchPaths = true,
+				diagnosticMode = "openFilesOnly",
+				useLibraryCodeForTypes = true,
+			},
 		},
 	},
 })
+
+-- lspconfig.pylyzer.setup({
+-- 	capabilities = capabilities,
+-- 	on_attach = on_attach,
+-- 	settings = {
+-- 		python = {
+-- 			checkOnType = false,
+-- 			diagnostics = false,
+-- 			inlayHints = false,
+-- 			smartCompletion = false,
+-- 		},
+-- 	},
+-- })
 
 lspconfig.dockerls.setup({
 	capabilities = capabilities,
