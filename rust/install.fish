@@ -1,3 +1,3 @@
 #!/usr/bin/env fish
-fish_add_path -a $HOME/.cargo/bin || true
+fish_add_path -a -u $HOME/.cargo/bin || true
 

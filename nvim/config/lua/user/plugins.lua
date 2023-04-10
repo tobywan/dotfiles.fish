@@ -353,7 +353,10 @@ packer.startup(function(use)
 	use({
 		"lukas-reineke/indent-blankline.nvim",
 		config = function()
-			require("indent_blankline").setup({})
+			require("indent_blankline").setup({
+				show_current_context = true,
+				show_current_context_start = true,
+			})
 		end,
 	})
 
@@ -408,11 +411,10 @@ packer.startup(function(use)
 		end,
 	})
 
-
 	use({
 		"nathom/filetype.nvim",
 		config = function()
-			require("filetype").setup {
+			require("filetype").setup({
 				overrides = {
 					extensions = {
 						tf = "terraform",
@@ -420,7 +422,7 @@ packer.startup(function(use)
 						tfstate = "json",
 					},
 				},
-			}
+			})
 		end,
 	})
 
@@ -463,8 +465,8 @@ if is_bootstrap then
 end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
--- vim.api.nvim_create_autocmd("BufWritePost", {
--- 	command = "source <afile> | PackerSync",
--- 	group = vim.api.nvim_create_augroup("Packer", { clear = true }),
--- 	pattern = "plugins.lua",
--- })
+vim.api.nvim_create_autocmd("BufWritePost", {
+	command = "source <afile> | PackerSync",
+	group = vim.api.nvim_create_augroup("Packer", { clear = true }),
+	pattern = "plugins.lua",
+})
