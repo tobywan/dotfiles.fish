@@ -86,7 +86,13 @@ with the same name.
 To install them all with `brew`:
 
 ```console
-$ brew install fish git-delta fzf gh grc kubectx starship zoxide fd exa bat alacritty kitty neovim tmux asdf node ripgrep
+$ brew install fish git-delta fzf gh grc kubectx starship zoxide fd exa bat alacritty neovim tmux asdf node ripgrep
+```
+
+Install Kitty from https://sw.kovidgoyal.net/kitty/binary/
+
+```
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 ```
 
 ## fonts
