@@ -89,9 +89,10 @@ To install them all with `brew`:
 $ brew install fish git-delta fzf gh grc kubectx starship zoxide fd exa bat alacritty neovim tmux asdf node ripgrep
 ```
 
-GPG tools via cask
+Cask installs
 ```
 brew install --cask gpg-suite
+brew install --cask karabiner-elements
 ```
 
 Install Kitty from https://sw.kovidgoyal.net/kitty/binary/
