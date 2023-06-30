@@ -110,8 +110,6 @@ brew install --cask font-victor-mono-nerd-font
 Patch the font https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/VictorMono
 
 
-- [`gpg-tools](https://gpgtools.org/) GPG Tools
-
 
 On Ubuntu:
 
@@ -130,6 +128,10 @@ You use it by running:
 ```
 
 And logging out and in again or restart.
+
+## Other
+
+Install tmux plugins: `tmux` then `CTRL+B, I`
 
 ## Themes and fonts being used
 
