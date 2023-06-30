@@ -66,6 +66,11 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 echo "  › Don't automatically rearrange Spaces based on most recent use"
 defaults write com.apple.dock mru-spaces -bool false
 
+echo "  › Change magnification to full"
+defaults write com.apple.dock magnification -int 1
+defaults write com.apple.dock largesize -int 128
+
+
 echo "  › Increase the window resize speed for Cocoa applications"
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
@@ -76,7 +81,7 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 echo "  › Disable auto-correct"
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-echo "  › Set up trackpad & mouse speed to a reasonable number"
+echo "  › Update the mouse cusor
 defaults write -g com.apple.trackpad.scaling 2
 defaults write -g com.apple.mouse.scaling 2.5
 

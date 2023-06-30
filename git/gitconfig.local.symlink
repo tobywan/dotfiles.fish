@@ -1,5 +1,9 @@
 # vi: ft=gitconfig
 
+[user]
+	name = Toby O'Sullivan
+	email = 17815047+tobywan@users.noreply.github.com
+
 [alias]
 	co = checkout
 	count = shortlog -sn
