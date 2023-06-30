@@ -283,14 +283,14 @@ null_ls.setup({
 
 -- setup diagnostics
 vim.diagnostic.config({ virtual_text = false })
-vim.api.nvim_create_autocmd({ "CursorHold" }, {
-	callback = function()
-		if vim.lsp.buf.server_ready() then
-			vim.diagnostic.open_float()
-		end
-	end,
-	group = vim.api.nvim_create_augroup("LSPDiagnosticsHold", { clear = true }),
-})
+-- vim.api.nvim_create_autocmd({ "CursorHold" }, {
+-- 	callback = function()
+-- 		if vim.lsp.buf.server_ready() then
+-- 			vim.diagnostic.open_float()
+-- 		end
+-- 	end,
+-- 	group = vim.api.nvim_create_augroup("LSPDiagnosticsHold", { clear = true }),
+-- })
 
 -- set up LSP signs
 for type, icon in pairs({
