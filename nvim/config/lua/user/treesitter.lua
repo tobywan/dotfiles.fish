@@ -64,7 +64,7 @@ require("nvim-treesitter.configs").setup({
 		"bibtex",
 		"cmake",
 		"vim",
-		"help",
+		"vimdoc",
 		"json5",
 		"hjson",
 		"http",

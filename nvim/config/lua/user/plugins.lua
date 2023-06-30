@@ -284,16 +284,16 @@ packer.startup(function(use)
 		},
 	})
 
-	use({
-		"rmagatti/session-lens",
-		requires = { "rmagatti/auto-session", "nvim-telescope/telescope.nvim" },
-		config = function()
-			require("session-lens").setup({
-				theme_conf = { border = true },
-				previewer = true,
-			})
-		end,
-	})
+	-- use({
+	-- 	"rmagatti/session-lens",
+	-- 	requires = { "rmagatti/auto-session", "nvim-telescope/telescope.nvim" },
+	-- 	config = function()
+	-- 		require("session-lens").setup({
+	-- 			theme_conf = { border = true },
+	-- 			previewer = true,
+	-- 		})
+	-- 	end,
+	-- })
 
 	-- the whole lsp, luasnip and cmp gang
 	use({
