@@ -138,6 +138,14 @@ Install tmux plugins: `tmux` then `CTRL+B, I`
 
 *Catppuccin Mocha* and *MonoLisa* Font.
 
+## Slack Themes
+
+Themes/Custom themes
+
+```
+#000000,#000000,#006600,#00ff00,#00ff00,#00ff00,#ff0000,#ff0000,#000000,#00ff00
+```
+
 ## Screenshots
 
 ###### neovim with LSP, git signs, etc

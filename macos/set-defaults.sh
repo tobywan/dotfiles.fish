@@ -1,4 +1,4 @@
-#!/bin/sh
+!/bin/sh
 # Sets reasonable macOS defaults.
 #
 # Or, in other words, set shit how I like in macOS.
@@ -11,6 +11,11 @@
 # Run ./set-defaults.sh and you'll be good to go.
 # To track what is going on with your defaults as you change them
 # use https://github.com/catilac/plistwatch
+
+# TODO
+# Hotkeys for desktops
+# Install/configure Logitech options+
+# Logitune for brio camera
 if [ "$(uname -s)" != "Darwin" ]; then
 	exit 0
 fi

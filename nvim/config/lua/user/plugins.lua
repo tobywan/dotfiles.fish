@@ -157,6 +157,7 @@ packer.startup(function(use)
 
 	use({
 		"j-hui/fidget.nvim",
+		tag = "legacy",
 		config = function()
 			require("fidget").setup({
 				text = {
@@ -260,8 +261,8 @@ packer.startup(function(use)
 				layout = {
 					height = { min = 4, max = 25 }, -- min and max height of the columns
 					width = { min = 10, max = 60 }, -- min and max width of the columns
-					spacing = 3, -- spacing between columns
-					align = "left", -- align columns left, center or right
+					spacing = 3,     -- spacing between columns
+					align = "left",  -- align columns left, center or right
 				},
 			})
 		end,
