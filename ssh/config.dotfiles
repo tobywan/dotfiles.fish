@@ -1,8 +1,7 @@
 # vi: ft=sshconfig
 
 # SSH over Session Manager
-Host i-015d52655f00c269b i-* mi-*
-    User ec2-user
+Host i-* mi-*
     ProxyCommand sh -c "aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
 	#    DynamicForward 15432
 #dev

@@ -261,8 +261,8 @@ packer.startup(function(use)
 				layout = {
 					height = { min = 4, max = 25 }, -- min and max height of the columns
 					width = { min = 10, max = 60 }, -- min and max width of the columns
-					spacing = 3,     -- spacing between columns
-					align = "left",  -- align columns left, center or right
+					spacing = 3, -- spacing between columns
+					align = "left", -- align columns left, center or right
 				},
 			})
 		end,
@@ -354,10 +354,7 @@ packer.startup(function(use)
 	use({
 		"lukas-reineke/indent-blankline.nvim",
 		config = function()
-			require("indent_blankline").setup({
-				show_current_context = true,
-				show_current_context_start = true,
-			})
+			require("ibl").setup()
 		end,
 	})
 
@@ -382,6 +379,7 @@ packer.startup(function(use)
 			"leoluz/nvim-dap-go",
 			"rcarriga/nvim-dap-ui",
 			"theHamsta/nvim-dap-virtual-text",
+			"nvim-neotest/nvim-nio",
 		},
 	})
 
@@ -412,20 +410,20 @@ packer.startup(function(use)
 		end,
 	})
 
-	use({
-		"nathom/filetype.nvim",
-		config = function()
-			require("filetype").setup({
-				overrides = {
-					extensions = {
-						tf = "terraform",
-						tfvars = "terraform",
-						tfstate = "json",
-					},
-				},
-			})
-		end,
-	})
+	-- use({
+	-- 	"nathom/filetype.nvim",
+	-- 	config = function()
+	-- 		require("filetype").setup({
+	-- 			overrides = {
+	-- 				extensions = {
+	-- 					tf = "terraform",
+	-- 					tfvars = "terraform",
+	-- 					tfstate = "json",
+	-- 				},
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- })
 
 	use({
 		"ojroques/vim-oscyank",
