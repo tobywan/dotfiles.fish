@@ -90,6 +90,15 @@ cmp.setup({
 				end,
 			},
 		},
+		{
+			name = "spell",
+			option = {
+				keep_all_entries = false,
+				enable_in_context = function()
+					return true
+				end,
+			},
+		},
 	}),
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
