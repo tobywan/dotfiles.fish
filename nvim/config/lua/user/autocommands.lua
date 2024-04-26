@@ -29,6 +29,13 @@ vim.api.nvim_create_autocmd("BufNewFile", {
 	group = vim.api.nvim_create_augroup("Mkdir", { clear = true }),
 })
 
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+	pattern = { "*.tf", "*.tfvars" },
+	callback = function()
+		vim.lsp.buf.format()
+	end,
+})
+
 vim.api.nvim_create_autocmd("BufWritePre", {
 	callback = function()
 		vim.cmd([[

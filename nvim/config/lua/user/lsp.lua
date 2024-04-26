@@ -58,7 +58,7 @@ local on_attach = function(client, bufnr)
 	-- buf_set_keymap("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 	buf_set_keymap("n", "<leader>lr", "<cmd>LspRestart<CR>", opts)
 
-	local auto_format_ls = { gopls = true, terraformls = true, lua_ls = true, ['null-ls'] = true, prosemd_lsp = true }
+	local auto_format_ls = { gopls = true, terraformls = true, lua_ls = true, ["null-ls"] = true, prosemd_lsp = true }
 
 	if client.server_capabilities.documentFormattingProvider and auto_format_ls[client.name] then
 		vim.api.nvim_create_autocmd({ "BufWritePre" }, {
