@@ -406,13 +406,13 @@ packer.startup(function(use)
 	use({
 		"mfussenegger/nvim-dap",
 		config = function()
-			require("user.debug")
+			--	require("user.debug")
 		end,
 		requires = {
+			"nvim-neotest/nvim-nio",
 			"leoluz/nvim-dap-go",
 			"rcarriga/nvim-dap-ui",
 			"theHamsta/nvim-dap-virtual-text",
-			"nvim-neotest/nvim-nio",
 		},
 	})
 
