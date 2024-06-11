@@ -177,6 +177,11 @@ lspconfig.tflint.setup({
 	on_attach = on_attach,
 })
 
+lspconfig.jinja_lsp.setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 lspconfig.pylsp.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
